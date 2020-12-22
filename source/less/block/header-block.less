@@ -1,43 +1,38 @@
 .header-block {
   position: relative;
-  width: 320px;
-  min-height: 553px;
-  background: url("../img/back-mobile.png");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  // background-position:;
+  background-position: top center;
 
   @media (min-width: @mobile-width) {
-    margin: 0 auto;
+    background-size: cover;
   }
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto;
-    width: 660px;
-    background: url("../img/back-tablet.png");
-    background-repeat: no-repeat;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
-    width: 1200px;
-    background: url("../img/back-desktop.png");
-    background-repeat: no-repeat;
-    background-position: top;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
   }
 }
 
 .header-block__wrapper {
+  margin: 0 auto;
   width: 280px;
-  min-height: 553px;
+  padding-top: 69px;
+  @media (min-width: @mobile-width) {
+
+  }
 
   @media (min-width: @tablet-width) {
+    padding: 110px 0;
     width: 620px;
-    padding: 0 20px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 110px 0;
     width: 940px;
-    padding: 0 100px;
   }
 }
 
@@ -47,6 +42,7 @@
   font-weight: 300;
   line-height: 39px;
   color: @white-color;
+  position: relative;
 
   p {
     margin-top: 12px;
@@ -73,24 +69,25 @@
 }
 
 .hand-img--image {
+  width:320px;
   height: 280px;
   background: url("../img/hand-iphone.png");
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: -110px;
+    z-index: 0;
     width: 660px;
     height: 545px;
-    top: -150px;
-    left: -20px;
     background: url("../img/hand.png");
     background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
+    bottom: -110px;
     width: 1050px;
     height: 645px;
-    top: -235px;
-    left: 45px;
     background: url("../img/hand-desktop.png");
     background-repeat: no-repeat;
   }
@@ -98,18 +95,16 @@
 
 .header-block__application {
   width: 320px;
-  height: 271px;
   background-color: #1d2631;
+  z-index: 10;
 
   @media (min-width: @tablet-width) {
     position: relative;
-    top: -530px;
     background-color: transparent;
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    top: -670px;
   }
 }
 
@@ -131,7 +126,8 @@
 .header-block__slogan {
   width: 280px;
   margin: 0 auto;
-  padding: 0 20px 34px;
+  position: relative;
+  z-index: 10;
 
   @media (min-width: @tablet-width) {
     margin-left: 18px;
