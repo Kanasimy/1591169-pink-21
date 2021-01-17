@@ -1,3 +1,8 @@
+.main {
+  position: relative;
+  z-index: 0;
+}
+
 .header-block {
   position: relative;
   background-image: url("../img/back-mobile.png");
@@ -14,18 +19,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 850px;
+    padding-top: 147px;
     background: url("../img/bg-desktop.jpg");
-  }
-}
-
-.header-block--form {
-  @media (min-width: @tablet-width) {
-    // height: 332px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 394px;
   }
 }
 
@@ -36,12 +31,12 @@
 
   @media (min-width: @tablet-width) {
     width: 620px;
-    padding: 110px 0;
+    padding-top: 98px;
   }
 
   @media (min-width: @desktop-width) {
     width: 940px;
-    padding: 110px 0;
+    padding: 0;
   }
 }
 
@@ -102,7 +97,7 @@
     z-index: 0;
     width: 660px;
     height: 545px;
-    top: 130px;
+    bootom: 0;
     left: 10px;
     background: url("../img/hand-iphone-tablet@1x.png");
   }
